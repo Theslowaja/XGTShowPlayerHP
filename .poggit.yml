@@ -1,4 +1,4 @@
---- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/XGDavid/XGTShowPlayerHP
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/Theslowaja/XGTShowPlayerHP
 build-by-default: true
 branches:
 - master
