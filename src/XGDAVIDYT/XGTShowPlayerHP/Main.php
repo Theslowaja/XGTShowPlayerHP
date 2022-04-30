@@ -17,6 +17,8 @@ use pocketmine\utils\Utils;
 use pocketmine\utils\Config;
 
 class Main extends PluginBase implements Listener{
+	
+	private Config $config;
   
 	public function onEnable():void{
 		$this->saveResource("config.yml");
