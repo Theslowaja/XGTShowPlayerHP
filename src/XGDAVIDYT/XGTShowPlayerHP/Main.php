@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace XGDAVIDYT\XGTShowPlayerHP;
 
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 use pocketmine\plugin\PluginBase;
 
@@ -18,12 +18,12 @@ use pocketmine\utils\Config;
 
 class Main extends PluginBase implements Listener{
   
-	public function onEnable(){
+	public function onEnable():void{
 		$this->saveResource("config.yml");
 		$this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML);
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		if($this->config->get("version") !== 1.2){
-			$this->getServer()->getLogger()->error("[XGTShowPlayerHP] Config is outdata!");
+			$this->getServer()->getLogger()->error("[XGTShowPlayerHP] Config is outdate!");
 			$this->getServer()->getPluginManager()->disablePlugin($this);
 		}
 	}
