@@ -36,7 +36,7 @@ class Main extends PluginBase implements Listener{
 				$player = $event->getDamager();
 				if($player instanceof Player){
 					$hp = floor($event->getEntity()->getHealth());
-					$name = $event->getEntity()->getName();
+					$name = $event->getEntity()->getNameTag();
 					$messagehp = str_replace(["@name", "@hp"], [$name, $hp], $this->config->get("MessageHP"));
 					$popupgehp = str_replace(["@name", "@hp"], [$name, $hp], $this->config->get("PopupHP"));
 					$titlehp = str_replace(["@name", "@hp"], [$name, $hp], $this->config->get("TitleHP"));
